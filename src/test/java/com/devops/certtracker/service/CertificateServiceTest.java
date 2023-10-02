@@ -187,8 +187,8 @@ public class CertificateServiceTest {
         CertificateServiceException exception = assertThrows(CertificateServiceException.class, () -> {
             certificateService.retrieveAndSaveCertificate(invalidUrl);
         });
-
-        assertEquals("valid URL format - no protocol: invalid-url", exception.getMessage());
+        // Assert that the exception message thrown matches
+        assertEquals("Invalid URL format - no protocol: invalid-url", exception.getMessage());
 
         // Verify that the certificateRepository.save method was not called for the invalid URL
         verify(certificateRepository, never()).save(any(Certificate.class));

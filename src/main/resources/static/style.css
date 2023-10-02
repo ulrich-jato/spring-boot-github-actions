@@ -1,0 +1,16 @@
+#expiringInTwoWeeks{
+    background-color: #ff922b;
+}
+#expiringInSixWeeks{
+    background-color: #ffd43b;
+}
+#expired{
+    background-color: #e03131;
+}
+#expiringGood{
+    background-color: #51cf66;
+}
+
+#certTable tbody {
+    font-weight: bold;
+}

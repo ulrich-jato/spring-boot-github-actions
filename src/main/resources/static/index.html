@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW) wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+  <title>SSL/TLS Tracking Application</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="description" content=" " />
+  <meta name="author" content=" "/>
+  <meta name="dcterms.title" content="SSL/TLS Tracking Application"/>
+  <meta name="dcterms.description" content=" "/>
+  <meta name="dcterms.creator" content=" "/>
+  <meta name="dcterms.language" content="eng"/>
+  <meta name="dcterms.subject" content=""/>
+  <meta name="dcterms.issued" content=""/>
+  <meta name="dcterms.modified" content="2023-09-20"/>
+
+  <link href="GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="GCWeb/css/theme.min.css" />
+<!--  <link rel="tablestylesheet" href="table.css">-->
+  <script src="index.js" defer></script>
+  <noscript><link rel="stylesheet" href="wet-boew/css/noscript.min.css" /></noscript>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+</header>
+
+<main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement"><h1 id="wb-cont" property="name">Welcome!</h1>
+  <div class="wb-prettify all-pre"></div>
+  <div class="table-responsive">
+    <table class="wb-tables table wb-init wb-tables-inited dataTable no-footer table-bordered-th table-striped table-bordered" id="certTable" aria-label="This table provides list of SSL/TLS certificates user saved to the table providing informtaion about the certificates">
+      <thead>
+      <tr>
+        <th>URL</th>
+        <th>Expiry</th>
+        <th>Delete</th>
+<!--        <th>Status</th>-->
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="wb-frmvld">
+    <form method="post" id="urlForm">
+      <label for="userInputUrl">Enter URL</label>
+      <input type="url" name="userInputUrl" id="userInputUrl" value="https://" required pattern="(https|HTTPS)://[a-zA-Z0-9-.]+" autofocus>
+      <span class="glyphicon glyphicon-plus" id="submitUrl"></span>
+<!--      <button type="submit">submit</button>-->
+      <div class="errorContainer">
+
+      </div>
+    </form>
+  </div>
+
+</main>
+<footer id="wb-info">
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
+<script src="GCWeb/wet-boew/js/wet-boew.min.js"></script>
+<script src="GCWeb/GCWeb/js/theme.min.js"></script>
+</body>
+</html>

@@ -14,10 +14,10 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_ROOT_PASSWORD: devops
-          MYSQL_DATABASE: certificatetracker
-          MYSQL_USER: devops
-          MYSQL_PASSWORD: devops
+          MYSQL_ROOT_PASSWORD: devop
+          MYSQL_DATABASE: certificatetracke
+          MYSQL_USER: devop
+          MYSQL_PASSWORD: devop
         options: >-
           --health-cmd "mysqladmin ping"
           --health-interval 10s

@@ -39,7 +39,7 @@ jobs:
         cache: maven
   
     - name: Build with Maven
-      run: mvn clean verify -Dspring.datasource.url=jdbc:mysql://localhost:3306/certificatetracker -Dspring.datasource.username=root -Dspring.datasource.password=devops
+      run: mvn clean verify -Dspring.datasource.url=jdbc:mysql://localhost:3306/certificatetracker -Dspring.datasource.username=root -Dspring.datasource.password=devops --file pom.xml
 
     - name: Report
       uses: dorny/test-reporter@v1

@@ -45,7 +45,7 @@ jobs:
           mysql -h 127.0.0.1 -P 3306 -u root -pdevops -e "SELECT 1" && break || sleep 10
         done
     - name: Build with Maven
-      run: mvn clean verify -Dspring.datasource.url=jdbc:mysql://127.0.0.1:3306/certificatetracker -Dspring.datasource.username=devops -Dspring.datasource.password=devops --file pom.xml
+      run: mvn clean verify 
 
     - name: Report
       uses: dorny/test-reporter@v1

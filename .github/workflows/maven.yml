@@ -39,8 +39,8 @@ jobs:
         cache: maven
     - name: Setup config
       run: |
-          mkdir config
-          echo 'spring.datasource.url=jdbc:mysql://mysql:3306/certificatetracker' > config/application.properties
+          # mkdir config
+          echo 'spring.datasource.url=jdbc:mysql://mysql:3306/certificatetracker' > application.properties
     - name: Build with Maven
       run: mvn clean verify
 

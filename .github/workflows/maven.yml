@@ -37,7 +37,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-  
+    - name: Wait for MySQL to start
+      run: |
+        for i in {1..30}; do
+          mysql -h mysql -u root -pdevops -e "SELECT 1" && break
+          echo "MySQL is not ready yet. Waiting..."
+          sleep 10
+        done
     - name: Build with Maven
       run: mvn clean verify -Dspring.datasource.url=jdbc:mysql://mysql:3306/certificatetracker -Dspring.datasource.username=devops -Dspring.datasource.password=devops --file pom.xml
 

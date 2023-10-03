@@ -40,12 +40,10 @@ jobs:
     - name: Wait for MySQL to start
       run: |
         for i in {1..30}; do
-          mysql -h mysql -u root -pdevops -e "SELECT 1" && break
-          echo "MySQL is not ready yet. Waiting..."
-          sleep 10
+          mysql -h 127.0.0.1 -P 3306 -u root -pdevops -e "SELECT 1" && break || sleep 10
         done
     - name: Build with Maven
-      run: mvn clean verify -Dspring.datasource.url=jdbc:mysql://mysql:3306/certificatetracker -Dspring.datasource.username=devops -Dspring.datasource.password=devops --file pom.xml
+      run: mvn clean verify -Dspring.datasource.url=jdbc:mysql://127.0.0.1:3306/certificatetracker -Dspring.datasource.username=devops -Dspring.datasource.password=devops --file pom.xml
 
     - name: Report
       uses: dorny/test-reporter@v1

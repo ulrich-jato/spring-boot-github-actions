@@ -56,15 +56,15 @@ jobs:
     # Checkout the code from the repository.
     - name: checkout code
       uses: actions/checkout@v3
-
+      
+    # Set up JDK 17 using the Temurin distribution and cache Maven.
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-        # Set up JDK 17 using the Temurin distribution and cache Maven.
-
+        
     - name: Wait for MySQL to start
       run: |
         # Wait for MySQL to start by attempting to connect to it.
